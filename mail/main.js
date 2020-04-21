@@ -9,7 +9,7 @@ var j = 0;
 // ask user their email address
 var email = prompt("Please enter your email address");
 
-// for loop checks if the given email is in the list, j increases for each match
+// for loop checks if the given email is in the list, j increases when a match is found
 for ( var i = 0; i < list.length; i++ ) {
     if ( isRegistered( email, list[i] )) {
         j++;
