@@ -4,21 +4,21 @@
 var list = [ "pinco.pallino@gmail.com", "johndoe@hotmail.it", "jane.doe@yahoo.it", "nome.cognome@gmail.com", "cognomenomenumero@gmail.com" ];
 
 // initialize email counter
-var j = 0;
+var j = false;
 
 // ask user their email address
 var email = prompt( "Please enter your email address" );
 
-// for loop checks if the given email is in the list, j increases when a match is found
+// for loop checks if the given email is in the list, when a match is found j becomes true
 for ( var i = 0; i < list.length; i++ ) {
     if ( isRegistered( email, list[i] ) ) {
-        j++;
+        j = true;
         break;
     }
 }
 
 // if j > 0 the email given is in the list
-if ( j > 0 ) {
+if ( j == true ) {
     console.log( "You have entered a registered email address." );
 // else the email given is not the list
 } else {
